@@ -1,4 +1,4 @@
-# DDOS Prevention Techniques
+# BRUTE FORCE Prevention Techniques
 
 ## Step-by-Step Guide
 
@@ -62,7 +62,7 @@ Navigate back to the `DDOS` folder and double-click the `index.html` file to reo
 ```
 
 ### STEP 8: Observe the Attack Simulation
-Scroll through the console output to see the brute force attempts. This demonstrates a model of a DDOS attack using brute force PIN testing.
+Scroll through the console output to see the brute force attempts. This demonstrates a model of a BRUTE FORCE attack using brute force search PIN testing.
 
 ---
 
@@ -94,5 +94,5 @@ CAPTCHA adds an additional layer of security by requiring users to input a code 
 
 ---
 
-These techniques demonstrate how to mitigate the risks of brute force and DDOS attacks through rate limiting and CAPTCHA verification.
+These techniques demonstrate how to mitigate the risks of brute force through rate limiting and CAPTCHA verification.
 
