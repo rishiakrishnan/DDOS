@@ -33,26 +33,27 @@ Navigate back to the `DDOS` folder and double-click the `index.html` file to reo
 2. A side menu will appear.
 
 #### Substeps:
-1. Click the **"top"** option near the eye symbol and select **"dev"**.
-2. Click the **eye symbol**, and a new line will appear.
-3. Paste the following code in the new line, press **Enter**, wait 2 seconds, and delete the pasted code:
+1. Click the **"console"** option.
+2. Click the **"top"** option near the eye symbol and select **"dev"**.
+3. Click the **eye symbol**, and a new line will appear.
+4. Paste the following code in the new line, press **Enter**, wait 2 seconds, and delete the pasted code:
 
 ```javascript
 (function testAllPins() {
-    const start = 1111;
-    const end = 9999;
-    const correctPin = 3456; // Replace with the logic for checking PIN in your form
+    const start = 0;  // Start from 0000
+    const end = 9999; // End at 9999
+    const correctPin = 3456; // Replace with actual checking logic
     let attempts = 0;
 
-    console.log("Starting test from", start, "to", end);
+    console.log(`Starting test from ${start.toString().padStart(4, '0')} to ${end}`);
 
     for (let pin = start; pin <= end; pin++) {
         attempts++;
+        let formattedPin = pin.toString().padStart(4, '0'); // Ensure 4-digit formatting
+        
         if (pin === correctPin) {
-            console.log(`Correct PIN found: ${pin} after ${attempts} attempts`);
-            return; // Exit the function completely
-        } else {
-            console.log(`Attempt ${attempts}: PIN ${pin} is incorrect.`);
+            console.log(`Correct PIN found: ${formattedPin} after ${attempts} attempts`);
+            return; // Stop execution when correct PIN is found
         }
     }
 
